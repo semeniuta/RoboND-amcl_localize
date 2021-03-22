@@ -16,4 +16,10 @@
         <param name="global_frame_id" value="map"/>
     </node>
 
+    <!-- Initial pose -->
+
+    <param name="initial_pose_x" value="0"/>
+    <param name="initial_pose_y" value="0"/>
+
+
 </launch>
