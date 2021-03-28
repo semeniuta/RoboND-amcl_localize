@@ -10,7 +10,8 @@
 
     <node name="amcl" pkg="amcl" type="amcl" output="screen">
         
-        <remap from="scan" to="amcl_localize/laser/scan"/>
+        <!-- <remap from="scan" to="amcl_localize/laser/scan"/> -->
+        <remap from="amcl_localize/laser/scan" to="scan"/>
         
         <param name="odom_frame_id" value="odom"/>
         <param name="odom_model_type" value="diff-corrected"/>
@@ -26,7 +27,8 @@
 
     <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
         
-        <remap from="scan" to="amcl_localize/laser/scan"/>
+        <!-- <remap from="scan" to="amcl_localize/laser/scan"/> -->
+        <remap from="amcl_localize/laser/scan" to="scan"/>
 
         <param name="base_global_planner" value="navfn/NavfnROS" />
         <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
